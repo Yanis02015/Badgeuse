@@ -9,9 +9,9 @@ public class Login extends JPanel {
     public static final String userLogin = "root";
     public static final String passwordHash = "ce5ca673d13b36118d54a7cf13aeb0ca012383bf771e713421b4d1fd841f539a";
 
-    private JButton btnLogin;
-    private JTextField login;
-    private JPasswordField password;
+    private final JButton btnLogin;
+    private final JTextField login;
+    private final JPasswordField password;
 
     public Login() {
         this.setLayout(new BorderLayout());
@@ -58,24 +58,12 @@ public class Login extends JPanel {
         return btnLogin;
     }
 
-    public void setBtnLogin(JButton btnLogin) {
-        this.btnLogin = btnLogin;
-    }
-
     public String getLogin() {
         return login.getText();
     }
 
-    public void setLogin(JTextField login) {
-        this.login = login;
-    }
-
     public String getPasswordEntered() {
         return String.valueOf(password.getPassword());
-    }
-
-    public void setPassword(JPasswordField password) {
-        this.password = password;
     }
 
     public String hashPassword(String passwordEntered) {
@@ -97,8 +85,6 @@ public class Login extends JPanel {
     }
 
     public boolean loginIsOk() {
-        System.out.println("login : " + this.getLogin() + "\nPassword : " + this.getPasswordEntered());
-        System.out.println("Password hash : " + this.hashPassword(this.getPasswordEntered()));
         return userLogin.equals(this.getLogin()) && passwordHash.equals(this.hashPassword(this.getPasswordEntered()));
     }
 }

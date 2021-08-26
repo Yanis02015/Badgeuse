@@ -5,17 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e703fd9-e2f7-46a3-9d24-9dc3cd3365c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/postgresql-42.2.23.jre6.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/control/Employees.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/Connexion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Login.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Window.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/jSerialComm-2.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/postgresql-42.2.23.jre6.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Badgeuse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Badgeuse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/postgresql-42.2.23.jre6.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Login.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Window.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,13 +44,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/postgresql-42.2.23.jre6.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/libraries/postgresql-42.2.23.jre6.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.13846153" />
     <property name="project.structure.side.proportion" value="0.22093023" />
   </component>
-  <component name="RunManager" selected="Application.Connexion">
-    <configuration name="Connexion" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Connexion" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.msy.badgeuse.model.Connexion" />
       <module name="Badgeuse" />
       <extension name="coverage">
@@ -76,7 +78,6 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Connexion" />
         <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>

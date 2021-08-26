@@ -2,6 +2,7 @@ package com.msy.badgeuse.view;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.concurrent.TimeUnit;
 
 public class Window extends JFrame {
     private final int width = 500;
@@ -29,6 +30,8 @@ public class Window extends JFrame {
         login = new Login();
         login.getBtnLogin().addActionListener(e -> {
             if(login.loginIsOk()) {
+                content.remove(login);
+                this.setContentPane(content);
                 toHome();
             }
         });
@@ -37,12 +40,11 @@ public class Window extends JFrame {
     }
 
     private void toHome() {
+        this.setContentPane(content);
         this.setSize(width, height);
         this.setLocation(450, 100);
-        JPanel p = new JPanel();
-        JLabel l = new JLabel("gggge");
-        p.add(l);
-        this.setContentPane(p);
+        Dashboard dashboard = new Dashboard();
+        this.setContentPane(dashboard);
     }
 
     private boolean loginIsOK() {

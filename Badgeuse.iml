@@ -10,7 +10,16 @@
     <orderEntry type="module-library">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/postgresql-42.2.23.jre6.jar!/" />
+          <root url="jar://$MODULE_DIR$/libraries/jSerialComm-2.7.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/postgresql-42.2.23.jre6.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />
