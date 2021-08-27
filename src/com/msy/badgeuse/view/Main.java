@@ -4,12 +4,18 @@ import com.fazecast.jSerialComm.SerialPort;
 import com.fazecast.jSerialComm.SerialPortDataListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 
+import javax.swing.*;
+
 public class Main {
+    public static Window w;
     public static final String CARTE_SUPER_USER = "";
     public static void main(String[] args) {
-        Window w = new Window("login");
-        w.setVisible(true);
+         w = new Window("Login");
+        testConnection();
 
+
+
+        /*
         try {
             SerialPort device = SerialPort.getCommPorts()[0];
             device.openPort();
@@ -38,7 +44,23 @@ public class Main {
                 }
             });
         } catch (Exception e) {
-            System.out.println("Problème de connexion avec le processeur de lecture de carte.");
+            System.err.println("Problème de connexion avec le processeur de lecture de carte.");
+            JOptionPane.showMessageDialog(new JFrame(), "Scanner de carte non détecté!", "Erreur", JOptionPane.ERROR_MESSAGE);
+        }*/
+    }
+
+    private static void testConnection() {
+        w.setVisible(true);
+        try {
+            SerialPort testDevice = SerialPort.getCommPorts()[0];
+            w.startScan();
+        } catch (Exception e) {
+            System.err.println("Problème de connexion avec le processeur de lecture de carte.");
+            String messageError = "Branchez la carte Arduino, puis reessayez.\nVoulez vous reessayer ?";
+            int dialogResult = JOptionPane.showConfirmDialog(new JFrame(), messageError, "Erreur de connexion", JOptionPane.YES_NO_OPTION);
+            if(dialogResult == JOptionPane.YES_OPTION) {
+                testConnection();
+            }
         }
     }
 

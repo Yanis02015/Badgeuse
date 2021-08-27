@@ -12,7 +12,7 @@ public class Dashboard extends JPanel {
     private JTable tableDetail;
     private int idEmployeSelected;
     private JButton btnShowEmployeSelected;
-    private EmployeesEntity employeesEntity;
+    private final EmployeesEntity employeesEntity;
     private DefaultTableModel defaultTableDetails;
 
     public Dashboard() {

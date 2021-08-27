@@ -26,7 +26,7 @@ public class EmployeesEntity {
         //On récupère les MetaData
         try {
             //L'objet ResultSet contient le résultat de la requête SQL
-            ResultSet result = statement.executeQuery("SELECT id, nom, prenom, fonction FROM table_b ORDER BY id");
+            ResultSet result = statement.executeQuery("SELECT id, nom, prenom, fonction FROM table_d ORDER BY id");
             connexion.close();
             //On récupère les MetaData
             ResultSetMetaData resultMeta = result.getMetaData();
@@ -55,12 +55,12 @@ public class EmployeesEntity {
         //On récupère les MetaData
         try {
             //L'objet ResultSet contient le résultat de la requête SQL
-            ResultSet result = statement.executeQuery("SELECT nom, prenom, day, start_at, end_at FROM table_b, table_c WHERE table_b.id = " + id + " AND table_b.id = table_c.idemploye;");
+            ResultSet result = statement.executeQuery("SELECT nom, prenom, day, start_at, end_at FROM table_d, table_e WHERE table_d.id = " + id + " AND table_d.id = table_e.idemploye;");
             connexion.close();
             //On récupère les MetaData
             ResultSetMetaData resultMeta = result.getMetaData();
+            Object[] obj = new Object[resultMeta.getColumnCount()];
             while(result.next()) {
-                Object[] obj = new Object[resultMeta.getColumnCount()];
                 for(int i = 1; i <= resultMeta.getColumnCount(); i++) {
                     obj[i-1] = result.getObject(i);
                 }
@@ -81,11 +81,29 @@ public class EmployeesEntity {
         Statement statement;
         statement = connexion.getStatement();
         try {
-            statement.execute("INSERT INTO table_b(nom, prenom, fonction) VALUES('" + employee.getFirstName() + "', '" + employee.getLastName() + "', '" + employee.getRole() + "');");
+            statement.execute("INSERT INTO table_d(carte_id, nom, prenom, fonction) VALUES('" + employee.getIdentifier() + "', '" + employee.getFirstName() + "', '" + employee.getLastName() + "', '" + employee.getRole() + "');");
             connexion.close();
             statement.close();
         } catch (SQLException throwables) {
             throwables.printStackTrace();
         }
+    }
+
+    public boolean itExists(String idCard) {
+        connexion = new Connexion();
+        connexion.seConnecter();
+        Statement statement;
+        statement = connexion.getStatement();
+        try {
+            ResultSet result = statement.executeQuery("SELECT exists (SELECT 1 FROM table_d WHERE carte_id = '" + idCard + "' LIMIT 1);");
+            connexion.close();
+            result.next();
+            boolean exists = Boolean.parseBoolean(result.getObject(1).toString());
+            statement.close();
+            return exists;
+        } catch (SQLException throwables) {
+            throwables.printStackTrace();
+        }
+        return false;
     }
 }
