@@ -16,18 +16,15 @@ public class Connexion {
         try {
             //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("org.postgresql.Driver");
-            System.out.println("1");
         } catch (ClassNotFoundException e) {
             System.err.print("ClassNotFoundException : ");
             System.err.println(e.getMessage());
         }
 
         try{
-            System.out.println("2");
             connection = DriverManager.getConnection(url, username, password);
             System.out.println("OK connexion réussie...");
             statement = connection.createStatement();
-            System.out.println("3");
         } catch(SQLException ex){
             System.out.println(ex.getMessage());
         }
@@ -47,7 +44,7 @@ public class Connexion {
             statement = connect.getStatement();
             connection = connect.getConnection();
         } catch(Exception ex){
-            System.out.println(ex.getMessage());
+            ex.printStackTrace();
         }
     }
     public void close(){
@@ -56,20 +53,5 @@ public class Connexion {
         } catch (SQLException ex) {
             Logger.getLogger(Connexion.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }
-
-    public static void main(String[] args) {
-        Connexion conn = new Connexion();
-        conn.seConnecter();
-        Statement statement;
-        ResultSet rs;
-        statement = conn.getStatement();
-        try {
-            statement.execute("INSERT INTO table_a(id, username, password) VALUES (4 , 'k', 'l')");
-            System.out.println("INSERTION REUSSI !");
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        conn.close();
     }
 }

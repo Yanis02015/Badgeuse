@@ -5,8 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e703fd9-e2f7-46a3-9d24-9dc3cd3365c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Home.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/control/Pointing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/PointingEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/CreateEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/MenuBar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/UpdateEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/EmployeesEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/EmployeesEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/Connexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" afterDir="false" />

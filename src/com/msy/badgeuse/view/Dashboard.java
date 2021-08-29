@@ -3,6 +3,7 @@ package com.msy.badgeuse.view;
 import com.msy.badgeuse.model.EmployeesEntity;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 
@@ -10,8 +11,8 @@ public class Dashboard extends JPanel {
     private DefaultTableModel defaultTableModel;
     private JTable table;
     private JTable tableDetail;
-    private int idEmployeSelected;
-    private JButton btnShowEmployeSelected;
+    private int idEmployeSelected = -1;
+    private JButton editEmployee;
     private final EmployeesEntity employeesEntity;
     private DefaultTableModel defaultTableDetails;
 
@@ -50,9 +51,13 @@ public class Dashboard extends JPanel {
         JScrollPane scDetail = new JScrollPane(tableDetail);
 
         // JButton showEmployeDetails
-        JButton showEmployeDetails = new JButton("Afficher les details de cet employé");
+        JButton showEmployeDetails = new JButton("Afficher les details");
+        editEmployee = new JButton("Modifier les informations");
         JPanel pBtnShowDetails = new JPanel();
-        pBtnShowDetails.add(showEmployeDetails);
+        pBtnShowDetails.setBorder(new EmptyBorder(5,0,5,0));
+        pBtnShowDetails.setLayout(new BorderLayout());
+        pBtnShowDetails.add(showEmployeDetails, BorderLayout.WEST);
+        pBtnShowDetails.add(editEmployee, BorderLayout.EAST);
         showEmployeDetails.addActionListener(e -> {
             int indexRowSelected = table.getSelectedRow();
             System.out.println(indexRowSelected);
@@ -81,13 +86,25 @@ public class Dashboard extends JPanel {
         this.add(b1, BorderLayout.CENTER);
     }
 
-    public JButton getBtnShowEmployeSelected() {
-        return btnShowEmployeSelected;
-    }
     public void updateModel() {
         String[] header = {"Nom", "Prénom", "Jour", "Début de service", "Fin de service"};
         defaultTableDetails.setRowCount(0);
         defaultTableDetails = employeesEntity.getTableDetails(header, idEmployeSelected);
         tableDetail.setModel(defaultTableDetails);
+    }
+
+    public void refreshTable() {
+        String[] header = {"Id", "Nom", "Prénom", "Fonction"};
+        defaultTableModel.setRowCount(0);
+        defaultTableModel = employeesEntity.getTableModel(header);
+        table.setModel(defaultTableModel);
+    }
+
+    public int getIdEmployeSelected() {
+        return idEmployeSelected;
+    }
+
+    public JButton getEditEmployee() {
+        return editEmployee;
     }
 }
