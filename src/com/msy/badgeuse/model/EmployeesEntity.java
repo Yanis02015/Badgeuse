@@ -26,7 +26,7 @@ public class EmployeesEntity {
         //On récupère les MetaData
         try {
             //L'objet ResultSet contient le résultat de la requête SQL
-            ResultSet result = statement.executeQuery("SELECT id, nom, prenom, fonction FROM table_d ORDER BY id");
+            ResultSet result = statement.executeQuery("SELECT id, nom, prenom, fonction FROM employe ORDER BY id");
             connexion.close();
             //On récupère les MetaData
             ResultSetMetaData resultMeta = result.getMetaData();
@@ -55,7 +55,7 @@ public class EmployeesEntity {
         //On récupère les MetaData
         try {
             //L'objet ResultSet contient le résultat de la requête SQL
-            ResultSet result = statement.executeQuery("SELECT nom, prenom, day, start_at, end_at FROM table_d, table_f WHERE table_d.id = " + id + " AND table_d.carte_id = table_f.idemploye;");
+            ResultSet result = statement.executeQuery("SELECT nom, prenom, day, start_at, end_at FROM employe, table_f WHERE employe.id = " + id + " AND employe.idEmploye = table_f.idemploye;");
             connexion.close();
             //On récupère les MetaData
             ResultSetMetaData resultMeta = result.getMetaData();
@@ -81,7 +81,7 @@ public class EmployeesEntity {
         Statement statement;
         statement = connexion.getStatement();
         try {
-            statement.execute("INSERT INTO table_d(carte_id, nom, prenom, fonction) VALUES('" + employee.getIdentifier() + "', '" + employee.getFirstName() + "', '" + employee.getLastName() + "', '" + employee.getRole() + "');");
+            statement.execute("INSERT INTO employe(idEmploye, nom, prenom, fonction) VALUES('" + employee.getIdentifier() + "', '" + employee.getFirstName() + "', '" + employee.getLastName() + "', '" + employee.getRole() + "');");
             connexion.close();
             JOptionPane.showMessageDialog(new JFrame(), "Employé ajouter avec sucées", "Succes message", JOptionPane.INFORMATION_MESSAGE);
             statement.close();
@@ -97,7 +97,7 @@ public class EmployeesEntity {
         Statement statement;
         statement = connexion.getStatement();
         try {
-            ResultSet result = statement.executeQuery("SELECT carte_id, nom, prenom, fonction FROM table_d WHERE id = " + id +";");
+            ResultSet result = statement.executeQuery("SELECT idEmploye, nom, prenom, fonction FROM employe WHERE id = " + id +";");
             connexion.close();
             result.next();
             String newCardId = result.getObject(1).toString();
@@ -119,7 +119,7 @@ public class EmployeesEntity {
         Statement statement;
         statement = connexion.getStatement();
         try {
-            statement.execute("UPDATE table_d SET carte_id = '" + employees.getIdentifier() + "', nom = '" + employees.getFirstName() + "', prenom = '" + employees.getLastName() + "', fonction= '" + employees.getRole() + "' WHERE id = " + id + ";");
+            statement.execute("UPDATE employe SET idEmploye = '" + employees.getIdentifier() + "', nom = '" + employees.getFirstName() + "', prenom = '" + employees.getLastName() + "', fonction= '" + employees.getRole() + "' WHERE id = " + id + ";");
             connexion.close();
             statement.close();
         } catch (SQLException throwables) {
@@ -134,7 +134,7 @@ public class EmployeesEntity {
         Statement statement;
         statement = connexion.getStatement();
         try {
-            ResultSet result = statement.executeQuery("SELECT exists (SELECT 1 FROM table_d WHERE carte_id = '" + idCard + "' LIMIT 1);");
+            ResultSet result = statement.executeQuery("SELECT exists (SELECT 1 FROM employe WHERE idEmploye = '" + idCard + "' LIMIT 1);");
             connexion.close();
             result.next();
             boolean exists = Boolean.parseBoolean(result.getObject(1).toString());

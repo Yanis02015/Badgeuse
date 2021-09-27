@@ -15,7 +15,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class Window extends JFrame {
-    private static final String CARTE_SUPER_USER = "SUPER_USER_ID";
     private Boolean adminConnected = false;
     private final int width = 500;
     private final int height = 610;
@@ -56,7 +55,7 @@ public class Window extends JFrame {
     }
 
     public void startScan() {
-        SerialPort device = SerialPort.getCommPorts()[0];
+        SerialPort device = SerialPort.getCommPorts()[2];
         device.openPort();
         device.addDataListener(new SerialPortDataListener() {
             @Override
@@ -66,6 +65,7 @@ public class Window extends JFrame {
 
             @Override
             public void serialEvent(SerialPortEvent serialPortEvent) {
+                System.out.println("Captured");
                 if (serialPortEvent.getEventType() == SerialPort.LISTENING_EVENT_DATA_RECEIVED) {
                     byte[] data = serialPortEvent.getReceivedData();
                     String msg = new String(data);

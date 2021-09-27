@@ -5,22 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1e703fd9-e2f7-46a3-9d24-9dc3cd3365c7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/control/Pointing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/PointingEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/CreateEmployee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/MenuBar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/UpdateEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/libraries/postgresql-42.2.23.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Badgeuse.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Badgeuse.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/Connexion.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/Connexion.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/EmployeesEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/EmployeesEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Dashboard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/PointingEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/model/PointingEntity.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Badgeuse/com/msy/badgeuse/view/Window.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/Connexion.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/Connexion.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/EmployeesEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Dashboard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/model/PointingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/model/PointingEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Window.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/msy/badgeuse/view/Window.java" afterDir="false" />
     </list>
@@ -38,6 +36,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectId" id="1wZSKMaG69UjnoABfCjbVx8NiTa" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -97,5 +103,17 @@
       <updated>1628664562521</updated>
     </task>
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>

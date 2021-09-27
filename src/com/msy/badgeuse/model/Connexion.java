@@ -9,13 +9,14 @@ public class Connexion {
     private Statement statement;
 
     public Connexion() {
-        String username = "yanis";
-        String password = "root";
-        String url = "jdbc:postgresql://localhost:5432/yanis"; //?autoReconnect=true&useSSL=false
+        String username = "salah";
+        String password = "salah";
+        String url = "jdbc:postgresql://localhost:5432/salah"; //?autoReconnect=true&useSSL=false
 
         try {
             //Class.forName("com.mysql.jdbc.Driver");
             Class.forName("org.postgresql.Driver");
+            System.out.println("connexion 1");
         } catch (ClassNotFoundException e) {
             System.err.print("ClassNotFoundException : ");
             System.err.println(e.getMessage());
@@ -26,7 +27,7 @@ public class Connexion {
             System.out.println("OK connexion réussie...");
             statement = connection.createStatement();
         } catch(SQLException ex){
-            System.out.println(ex.getMessage());
+            System.err.println(ex.getMessage());
         }
     }
 

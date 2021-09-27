@@ -19,6 +19,7 @@ public class PointingEntity {
         statement = connexion.getStatement();
         try {
             String sqlRequest = "INSERT INTO table_f (day, start_at, idemploye) VALUES('" + pointing.getDate() + "', '" + pointing.getStartAt() + "', '" + pointing.getIdentifier() + "');";
+
             if(pointing.getEndAt() == null) {
                 statement.execute(sqlRequest);
             }
@@ -54,7 +55,6 @@ public class PointingEntity {
             connexion.close();
             String endAt = "NULL";
             while(result.next()) {
-                endAt = "NULL";
                 endAt = result.getObject(1).toString();
             }
             if (endAt.equals("NULL")) {

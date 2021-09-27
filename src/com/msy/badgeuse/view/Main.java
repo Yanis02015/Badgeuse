@@ -16,7 +16,8 @@ public class Main {
     private static void testConnection() {
         w.setVisible(true);
         try {
-            SerialPort testDevice = SerialPort.getCommPorts()[0];
+            SerialPort testDevice = SerialPort.getCommPorts()[2];
+            System.out.println("co reussi a arduino");
             w.startScan();
         } catch (Exception e) {
             System.err.println("Problème de connexion avec le processeur de lecture de carte.");
@@ -24,7 +25,8 @@ public class Main {
             int dialogResult = JOptionPane.showConfirmDialog(new JFrame(), messageError, "Erreur de connexion", JOptionPane.YES_NO_OPTION);
             if (dialogResult == JOptionPane.YES_OPTION) {
                 testConnection();
-            }
+            } else
+                w.dispose();
         }
     }
 
