@@ -15,7 +15,7 @@ public class UpdateEmployee extends JFrame {
 
     public UpdateEmployee(Employees employees) {
         this.setTitle("Edit Employé");
-        this.setSize(350, 330);
+        this.setSize(350, 350);
         this.setLocation(600, 190);
         this.setResizable(false);
 

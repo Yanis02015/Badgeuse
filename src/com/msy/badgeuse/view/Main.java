@@ -9,7 +9,7 @@ public class Main {
     public static final String CARTE_SUPER_USER = "";
 
     public static void main(String[] args) {
-        w = new Window("Login");
+        w = new Window("Badgeuse PFC");
         testConnection();
     }
 

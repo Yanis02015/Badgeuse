@@ -105,6 +105,12 @@ public class Dashboard extends JPanel {
     }
 
     public JButton getEditEmployee() {
+        int indexRowSelected = table.getSelectedRow();
+        if(indexRowSelected != -1) {
+            String valueId = table.getModel().getValueAt(indexRowSelected, 0).toString();
+            idEmployeSelected = Integer.parseInt(valueId);
+        }
+
         return editEmployee;
     }
 }
